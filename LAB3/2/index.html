@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="controller.js"></script>
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="script.js"></script>
+    <title>LAB3</title>
+  </head>
+  <body onload="init()">
+
+    <div class="input">
+      Name: <input type="text" name="nameOfThePerson" value="" id="name">
+    </div>
+
+    <div class="button">
+      <input type="submit" value="Submit" onClick="addPerson()">
+      <input type="submit" value="Clear" onClick="clearStorage()">
+    </div>
+
+    <p class="person">PersonsList:</p>
+    <br>
+    <div id="results">
+    </div>
+
+  </body>
+</html>

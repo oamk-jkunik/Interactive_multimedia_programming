@@ -1,0 +1,53 @@
+body {
+  size: 2em;
+  background-color: #000000;
+}
+
+.input {
+  width: 20%;
+  float: left;
+  color: #D3D3D3;
+}
+
+.button {
+  width: 15%;
+  float: left;
+}
+
+.person {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  color: #00FFFF;
+}
+
+#results {
+  width: 20%;
+  float: left;
+  color: #00FFFF;
+}
+
+@media only screen and (max-width: 789px) {
+  .input {
+    width: auto;
+    float: none;
+    color: #D3D3D3;
+  }
+
+  .button {
+    width: auto;
+    float: none;
+  }
+
+  .person {
+    width: auto;
+    float: none;
+    color: #00FFFF;
+  }
+
+  #results {
+    width: auto;
+    float: none;
+    color: #00FFFF;
+  }
+}
