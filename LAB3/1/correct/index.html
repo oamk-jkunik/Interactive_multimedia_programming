@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+<title>LAB3</title>
+  <meta charset = "UTF-8" />
+  <script language="javascript" type="text/javascript" src="script.js"></script>
+</head>
+<body onload = "init()">
+  <h1>WebSocket Test</h1>
+  <form action = "">
+
+      <button type = "button"
+              onclick = "connect()">
+        connect to server
+      </button>
+
+      <label for = "txtMessage">
+        <input type = "text"
+               id = "txtMessage"
+               value = "" />
+      </label>
+
+      <button type = "button"
+              onclick = "sendMessage()">
+        send message
+      </button>
+
+      <button type = "button"
+              onclick = "websocket.close()">
+        disconnect
+      </button>
+
+  </form>
+  <div id="output">Click 'connect' button to connect</div>
+</body>
+</html>
