@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <title>LAB6</title>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <!--<script src="jquery_test.js"></script> Instalation jQuery test-->
+</head>
+<body>
+
+  <h3>LAB 6</h3>
+
+  <input type="text" id="tag"> <input type="submit" onclick="fun()" value="Submit">
+  <br>
+  <br>
+  <div id="images"></div>
+
+  <script>
+
+    function fun() {
+      var tag = document.getElementById("tag").value;
+      document.getElementById("images").innerHTML = "";
+
+      (function() {
+        var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+        $.getJSON(flickerAPI, {
+          tags: tag,
+          tagmode: "any",
+          format: "json"
+        })
+        .done(function(data) {
+          $.each(data.items, function(i, item) {
+            $("<img>").attr("src", item.media.m).appendTo("#images");
+            if (i === 20) {
+              return false;
+            }
+          });
+        });
+      })();
+    }
+    
+  </script>
+
+</body>
+</html>
